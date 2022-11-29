@@ -13,7 +13,7 @@
             $this->servidor = "localhost";
             $this->banco = "agenda_senai";
             $this->usuario = "root";
-            $this->senha = "root";
+            $this->senha = "";
         }
         public function conectar(){
             try{//Verifica se não há nunhum problema na conexao
