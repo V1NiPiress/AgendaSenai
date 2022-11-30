@@ -1,12 +1,20 @@
 <?php 
+session_start();
 include 'inc/header.inc.php';
 include 'classes/contatos.class.php';
+include 'classes/usuarios.class.php';
+
+if(!isset($_SESSION['logado'])){
+        header("Location: login.php");
+        exit;
+}
 $contatos = new Contatos();
 ?>
         <h1>Agenda Senai 2</h1>
         <hr>
         <button><a href="adicionar_contato.php">ADICIONAR</a></button>
         <button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
+        <button><a href="adicionar_contato.php">SAIR</a></button>
         <br><br><hr>
         <table border="1" width="100%">
         <tr>
