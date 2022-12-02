@@ -17,7 +17,7 @@ class Usuarios {
      }
 
 /*
-aqui deve ser criado o CRUD para Usuarios
+aqui deve ser criado o CRUD para Usuarios  
 -adicionar
 -listar
 -buscar
@@ -28,10 +28,10 @@ aqui deve ser criado o CRUD para Usuarios
 
 //metodos referentes ao login
 
-public function fezerLogin ($email, $senha){
+public function fazerLogin($email, $senha){
 
-$sql = $this->con ->conectar()->prepare
-("SELECT * FROM usuarios WHERE email = : email AND senha = :senha");
+$sql = $this->con->conectar()->prepare
+("SELECT * FROM usuarios WHERE email = :email AND senha = :senha");
 $sql ->bindValue (":email", $email);
 $sql ->bindValue (":senha", $senha);
 $sql ->execute();
@@ -48,8 +48,8 @@ $sql ->execute();
     }
     public function setUsuario($id){
         $this->id = $id;
-        $sql = $this->con->conectar()->prepare("SELECT * FROM usuarios WHERE id = :id")
-        $sql->execute()    
+        $sql = $this->con->conectar()->prepare("SELECT * FROM usuarios WHERE id = :id");
+        $sql->execute();   
 
         if($sql->rowCount() > 0 ){
             $sql = $sql->fetch();

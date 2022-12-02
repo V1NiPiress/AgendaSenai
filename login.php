@@ -3,7 +3,7 @@ session_start();
 require 'classes/usuario.class.php';
 if(!empty($_POST['email'])){
     $email = addslashes($_POST['email']);
-    $senha = md5($_POST['$senha']);
+    $senha = md5($_POST['senha']);
 
     $usuario = new Usuarios();
     if($usuario->fazerLogin($email, $senha)){
@@ -11,7 +11,7 @@ if(!empty($_POST['email'])){
         exit;
     }
     else{
-        echo"usuário e/ou senha estão INCORRETOS!";
+        echo"Usuário e/ou senha estão INCORRETOS!";
     }
   }
 
