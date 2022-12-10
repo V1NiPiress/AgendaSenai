@@ -3,7 +3,7 @@ session_start();
 require 'classes/usuario.class.php';
 if(!empty($_POST['email'])){
     $email = addslashes($_POST['email']);
-    $senha = md5($_POST['senha']);
+    $senha = $_POST['senha'];
 
     $usuario = new Usuarios();
     if($usuario->fazerLogin($email, $senha)){

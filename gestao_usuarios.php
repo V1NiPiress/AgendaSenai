@@ -1,24 +1,41 @@
-<?php require 'inc/header.inc.php';?>
+<?php require 'inc/header.inc.php';
+include 'classes/usuario.class.php';
+$usuario = new Usuarios();
+?>
 
-<h1>USUÁRIOS</h1>
-<form method="POST" action="usuario.class.php">
-<h2>ADICIONAR</h2>    
-<input type="hidden" name="id" value="<?php echo $info['id']; ?>">
-    Nome: <br>
-    <input type="text" name="nome" value="<?php echo $info['nome']; ?>"><br><br>
-    Email: <br>
-    <input type="text" name="ddd" value="<?php echo $info['ddd']; ?>"><br><br>
-    : <br>
-    <input type="text" name="telefone" value="<?php echo $info['telefone']; ?>"><br><br>
-    Email: <br>
-    <input type="email" name="email" value="<?php echo $info['email']; ?>"><br><br>
-    CPF: <br>
-    <input type="text" name="cpf" value="<?php echo $info['cpf']; ?>"><br><br>
-    Endereço: <br>
-    <input type="text" name="endereco" value="<?php echo $info['endereco']; ?>"><br><br>
+<h1>GESTÃO DE USUÁRIOS</h1>
+        <hr>
+         <button><a href="adicionar_usuario.php">ADICIONAR USUÁRIO</a></button>
+        <button><a href="sair_usuario.php">VOLTAR</a></button>
+         
+         <table border="1" width="100%">
+        <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>EMAIL</th>
+                <th>PERMISSÕES</th>
+                <th>AÇÕES</th>
 
-    <input type="submit"  value="SALVAR">
-</form>
+        </tr>
+        <?php
+                $lista = $usuario->listar();
+                foreach($lista as $item):
+        ?>
+        <tr>
+                <td><?php echo $item['id']; ?></td>
+                <td><?php echo $item['nome']; ?></td>
+                <td><?php echo $item['email']; ?></td>
+                <td><?php echo $item['permissoes']; ?></td>
 
-
-<?php require 'inc/footer.inc.php';?>
+                <td>
+                        <button><a href="editar_usuarios.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
+                        <button><a href="excluir_usuarios.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que deseja excluir este usuario?')">EXCLUIR</a></button>
+                </td>
+        </tr>
+        <?php
+                endforeach;
+        ?>
+        </table>
+         
+            <br><br><hr>
+         
