@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Nov-2022 às 03:04
+-- Tempo de geração: 12-Dez-2022 às 03:38
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.4.14
 
@@ -43,7 +43,7 @@ CREATE TABLE `contatos` (
 
 INSERT INTO `contatos` (`id`, `nome`, `ddd`, `telefone`, `email`, `cpf`, `endereco`) VALUES
 (1, 'Vanessa', '42', '99988333', 'vanessa@gmail.com', '87474747444', 'rua: Chile, 22'),
-(2, 'Cleber', '90', '92424242424', 'clebin@admin.senai.org', '066242424', 'rua: Sem noÃ§Ã£o, 24');
+(2, 'Cleber', '90', '924242433', 'clebin@admin.senai.org', '066242424', 'rua: Sem noção, 24');
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,14 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `permissoes`) VALUES
-(1, 'Vini', 'vini@gmail.com', '202cb962ac59075b964b07152d234b70', 'SUPER');
+(1, 'Vini', 'vini@gmail.com', '123', 'SUPER'),
+(13, 'valmir', 'val@gamail.com', '887', 'EDIT'),
+(14, 'Biro', 'bir@gamail.com', '777', 'ADD'),
+(15, 'Paulo', 'linho@gamail.com', '990099', 'DELETE'),
+(16, 'a', 'aaaa@gamail.com', '333', 'EDIT'),
+(17, 'cccadaasa', 'cca@gamail.com', '767', 'EDIT'),
+(18, 'VAMPETTA', 'vamps@gamail.com', '6564', 'ADD'),
+(19, 'yoki', 'yo@gamail.com', '768', 'EDIT');
 
 --
 -- Índices para tabelas despejadas
@@ -96,7 +103,7 @@ ALTER TABLE `contatos`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -17,7 +17,7 @@ class Usuarios {
      }
 
 /*
-aqui deve ser criado o CRUD para Usuarios  
+CRUD para Usuarios  
 -adicionar
 -listar
 -buscar
@@ -74,16 +74,15 @@ aqui deve ser criado o CRUD para Usuarios
     }
 }
 
- public function editar($nome, $email, $senha, $permissoes, $id){
+ public function editar($nome, $email, $permissoes, $id){
     $emailExistente = $this->existeEmail($email);
     if(count($emailExistente) > 0 && $emailExistente['id'] != $id){
         return FALSE;
     }else{
         try{
-            $sql = $this->con->conectar()->prepare("UPDATE usuarios SET nome = :nome, email = :email, senha = :senha, permissoes = :permissoes WHERE id = :id");
+            $sql = $this->con->conectar()->prepare("UPDATE usuarios SET nome = :nome, email = :email, permissoes = :permissoes WHERE id = :id");
             $sql->bindValue(':nome', $nome);
             $sql->bindValue(':email', $email);
-            $sql->bindValue(':senha', $senha);
             $sql->bindValue(':permissoes', $permissoes);
             $sql->bindValue(':id', $id);
             $sql->execute();
@@ -98,7 +97,7 @@ aqui deve ser criado o CRUD para Usuarios
  public function excluir($id){
     $sql = $this->con->conectar()->prepare("DELETE FROM usuarios WHERE id = :id");
     $sql->bindValue(':id', $id);
-   $sql->execute();
+    $sql->execute();
  }  
   
  private function existeEmail($email){
@@ -113,6 +112,7 @@ aqui deve ser criado o CRUD para Usuarios
     }
     return $array;
     }
+
 
 //metodos referentes ao login
 

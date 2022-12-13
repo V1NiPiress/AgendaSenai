@@ -7,7 +7,7 @@ $usuario = new Usuarios();
 if(!empty($_POST['email'])){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
     $permissoes = $_POST['permissoes'];
 
     $usuario->adicionar($nome, $email, $senha, $permissoes);

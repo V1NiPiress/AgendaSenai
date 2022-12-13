@@ -1,6 +1,6 @@
 <?php require 'inc/header.inc.php';?>
 
-<h1>ADICIONAR CONTATO</h1>
+<center><br><h1>ADICIONAR CONTATO</h1>
 <form method="post" action="adicionar_contato_submit.php">
     Nome: <br>
     <input type="text" name="nome"><br><br>
@@ -17,6 +17,7 @@
 
     <input type="submit" name="btCadastrar" value="ADICIONAR">
 </form>
+</center>
 
 
 <?php require 'inc/footer.inc.php';?>

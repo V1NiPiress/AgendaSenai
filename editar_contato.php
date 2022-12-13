@@ -7,16 +7,16 @@ if(!empty($_GET['id'])){
     $id = $_GET['id'];
     $info = $contato->busca($id);
     if(empty($info['email'])){
-        header("Location: /agendaSenai");
+        header("Location: /SENAI_AGENDA");
         exit;
     }
 }else{
-    header("Location: /agendaSenai");
+    header("Location: /SENAI_AGENDA");
     exit;
 }
 ?>
 
-<h1>EDITAR CONTATO</h1>
+<center><h1>EDITAR CONTATO</h1>
 <form method="POST" action="editar_contato_submit.php">
     <input type="hidden" name="id" value="<?php echo $info['id']; ?>">
     Nome: <br>
@@ -34,5 +34,5 @@ if(!empty($_GET['id'])){
 
     <input type="submit"  value="SALVAR">
 </form>
-
+</center>
 <?php require 'inc/footer.inc.php';?>

@@ -13,15 +13,16 @@ $contatos = new Contatos();
 $usuario = new Usuarios();
 $usuario->setUsuario($_SESSION['logado']);
 ?>
-        <h1>Agenda de Jorge Vinicius</h1>
-        <hr>
-        <?php if($usuario->temPermissoes('ADD')):?><button><a href="adicionar_contato.php">ADICIONAR</a></button>
+        <center><h1>Agenda de Jorge Vinicius</h1>
+        <br>
+        <?php if($usuario->temPermissoes('ADD')):?><button class="btn btn-default"><a href="adicionar_contato.php">ADICIONAR</a></button>
         <?php endif; ?>
-        <?php if($usuario->temPermissoes('SUPER')):?><button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
+        <?php if($usuario->temPermissoes('SUPER')):?><button class="btn btn-default"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
         <?php endif; ?>
-        <button><a href="sair.php">SAIR</a></button>
-        <br><br><hr>
-        <table border="1" width="100%">
+        <button class="btn btn-default"><a href="sair.php">SAIR</a></button>
+        <br><br><br>
+        </center>
+        <table class="table table-bordered table-striped" width="100%">
         <tr>
                 <th>ID</th>
                 <th>NOME</th>
@@ -45,9 +46,9 @@ $usuario->setUsuario($_SESSION['logado']);
                 <td><?php echo $item['cpf']; ?></td>
                 <td><?php echo $item['endereco']; ?></td>
                 <td>
-                        <?php if($usuario->temPermissoes('EDIT')):?><button><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
+                        <?php if($usuario->temPermissoes('EDIT')):?><button class="btn btn-default"><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
                                 <?php endif; ?>
-                        <?php if($usuario->temPermissoes('DELETE')):?><button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que deseja excluir este contato?')">EXCLUIR</a></button>
+                        <?php if($usuario->temPermissoes('DELETE')):?><button class="btn btn-default"><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que deseja excluir este contato?')">EXCLUIR</a></button>
                                 <?php endif; ?>
                 </td>
         </tr>
@@ -55,6 +56,7 @@ $usuario->setUsuario($_SESSION['logado']);
                 endforeach;
         ?>
         </table>
+        <br><br>
 <?php
 include 'inc/footer.inc.php';
 ?>
