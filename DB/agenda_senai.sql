@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Dez-2022 às 03:38
+-- Tempo de geração: 13-Dez-2022 às 03:02
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.4.14
 
@@ -42,8 +42,9 @@ CREATE TABLE `contatos` (
 --
 
 INSERT INTO `contatos` (`id`, `nome`, `ddd`, `telefone`, `email`, `cpf`, `endereco`) VALUES
-(1, 'Vanessa', '42', '99988333', 'vanessa@gmail.com', '87474747444', 'rua: Chile, 22'),
-(2, 'Cleber', '90', '924242433', 'clebin@admin.senai.org', '066242424', 'rua: Sem noção, 24');
+(1, 'Alessi', '49', '999883982', 'alessi@dmail.com', '87474747441', 'Rua: Chile, 22'),
+(2, 'Tomas', '44', '988836545', 'tomas@fmail.com', '31425671288', 'Rua: Esquina, 24'),
+(4, 'Bolacha da Silva ', '43', '9988732132', 'bola@outlok.com', '87654321982', 'Rua, Fundão 332');
 
 -- --------------------------------------------------------
 
@@ -64,14 +65,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `permissoes`) VALUES
-(1, 'Vini', 'vini@gmail.com', '123', 'SUPER'),
-(13, 'valmir', 'val@gamail.com', '887', 'EDIT'),
-(14, 'Biro', 'bir@gamail.com', '777', 'ADD'),
-(15, 'Paulo', 'linho@gamail.com', '990099', 'DELETE'),
-(16, 'a', 'aaaa@gamail.com', '333', 'EDIT'),
-(17, 'cccadaasa', 'cca@gamail.com', '767', 'EDIT'),
-(18, 'VAMPETTA', 'vamps@gamail.com', '6564', 'ADD'),
-(19, 'yoki', 'yo@gamail.com', '768', 'EDIT');
+(1, 'Vini', 'vini@gmail.com', '202cb962ac59075b964b07152d234b70', 'SUPER'),
+(13, 'valmir', 'val@gaamail.com', '7ce3284b743aefde80ffd9aec500e085', 'DELETE');
 
 --
 -- Índices para tabelas despejadas
@@ -97,7 +92,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `contatos`
 --
 ALTER TABLE `contatos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
