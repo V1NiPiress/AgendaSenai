@@ -12,7 +12,7 @@ $usuario = new Usuarios();
         </center>
         <br><br>
 
-         <table class="table table-bordered table-striped" width="100%">
+        <table class="table table-bordered table-striped" width="100%">
         <tr>
                 <th>ID</th>
                 <th>NOME</th>

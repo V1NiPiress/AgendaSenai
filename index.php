@@ -12,7 +12,8 @@ if(!isset($_SESSION['logado'])){
 $contatos = new Contatos();
 $usuario = new Usuarios();
 $usuario->setUsuario($_SESSION['logado']);
-?>
+?>      
+        <br>
         <center><h1>Agenda de Jorge Vinicius</h1>
         <br>
         <?php if($usuario->temPermissoes('ADD')):?><button class="btn btn-default"><a href="adicionar_contato.php">ADICIONAR</a></button>

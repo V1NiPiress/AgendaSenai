@@ -5,8 +5,8 @@ $contato = new Contatos();
 if(!empty($_GET['id'])){
     $id = $_GET['id'];
     $contato->excluir($id);
-    header("Location: /SENAI_AGENDA");
+    header("Location: /senai_agenda");
 }else{
     echo '<script type="text/javascript">alert("Erro ao excluir contato!");</script>';
-    header("Location: /SENAI_AGENDA");
+    header("Location: /senai_agenda");
 }

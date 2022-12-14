@@ -1,4 +1,5 @@
 <?php
+require 'inc/header.inc.php';
 session_start();
 require 'classes/usuario.class.php';
 if(!empty($_POST['email'])){
@@ -18,16 +19,20 @@ if(!empty($_POST['email'])){
 ?>
 
 <center>
+
+    
     <h1>LOGIN</h1>
     <form method="post">
         Email: <br>
-        <input type="email" name="email"><br><br>
+        <input type="email" name="email" id="email_log"><br><br>
         Senha: <br>
-        <input type="password" 
-        name="senha"><br><br>
+        <input type="password" name="senha" id="senha_log"><br><br>
         <br>
-        <input type="submit" value="Entrar">
-    </form>
-  
+        <input type="submit" class="btn btn-default" value="Entrar">
+    </form> 
+    
+
 </center>
+<br><br>
+<?php require 'inc/footer.inc.php';?>
   

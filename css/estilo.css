@@ -9,21 +9,12 @@ body{
 header{
     position: relative;
     height: 150px;
-    border: 30px solid transparent;
-}
-
-form{
-    border: 30px solid transparent;
 }
 
 footer{
-    background: linear-gradient(#01a8d1,#b4f0ff, #01a8d1);
+    background: linear-gradient(#01a8d1,#00beee, #01a8d1);
     height: 160px;
     margin-top: auto
-}
-
-center{
-    font-style: italic;
 }
 
 tbody{
@@ -31,11 +22,125 @@ tbody{
     font-style: italic;
 }
 
+tr{
+    background-color: #008caf;
+}
+
+/*LOGIN*/
+input#email_log{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#senha_log{
+    border-radius: 9px;
+    border-color: #848484;
+}
 
 
+/*ADICIONAR CONTATO*/
+input#nome_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#ddd_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#telefone_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#email_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#cpf_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#endereco_cont_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
 
 
+/*EDITAR CONTATO*/
+input#nome_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
 
+input#ddd_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
 
+input#telefone_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#email_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#cpf_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#endereco_cont_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+/*ADICIONAR USUÁRIO*/
+input#nome_usu_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#email_usu_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#email_usu_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#senha_usu_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#perm_usu_add{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+/*EDITAR USUÁRIO*/
+input#nome_usu_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#email_usu_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
+
+input#perm_usu_edit{
+    border-radius: 9px;
+    border-color: #848484;
+}
 
 

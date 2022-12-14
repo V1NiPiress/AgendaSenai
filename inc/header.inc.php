@@ -6,6 +6,7 @@
         <title>AgendaSenai</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel = "icon" type = "imagem/x-icon" href = "img/favicon.ico"/>
         <script type="text/javascritp" src="js/jquery.min.js"></script>
         <script type="text/javascritp" src="js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/28a6825ec6.js" crossorigin="anonymous"></script>
