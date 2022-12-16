@@ -1,9 +1,7 @@
-<?php 
-session_start();
+<?php session_start();
 include 'inc/header.inc.php';
 include 'classes/contatos.class.php';
 include 'classes/usuario.class.php';
-
 
 if(!isset($_SESSION['logado'])){
         header("Location: login.php");
@@ -60,5 +58,4 @@ $usuario->setUsuario($_SESSION['logado']);
         <br><br>
 <?php
 include 'inc/footer.inc.php';
-?>
-        
+?>     

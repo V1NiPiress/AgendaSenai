@@ -1,5 +1,5 @@
 <?php
-require 'inc/header.inc.php';
+require 'inc/header.inc.php';   
 session_start();
 require 'classes/usuario.class.php';
 if(!empty($_POST['email'])){
